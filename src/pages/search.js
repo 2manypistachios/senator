@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { graphq } from "gatsby"
 import debounce from "lodash.debounce"
 import Layout from "../components/layout"
 import SearchForm from "../components/searchForm"

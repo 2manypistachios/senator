@@ -1,6 +1,11 @@
 ---
 title: My Second Post!
+category: woo
+subcategory: woohoo
+source: "http:website.com"
+author: woo
 date: "2015-05-06T23:46:37.121Z"
+description: One man's dedication to salted duck eggs
 ---
 
 Wow! I love blogging so much already.

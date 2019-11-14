@@ -1,6 +1,11 @@
 ---
 title: Hello World
+category: woo
+subcategory: woohoo
+source: "http:website.com"
+author: woo
 date: "2015-05-01T22:12:03.284Z"
+description: The first post on fake blog
 ---
 
 This is my first post on my new fake blog! How exciting!

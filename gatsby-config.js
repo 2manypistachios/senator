@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog With Lunr`,
-    author: `Luke Whitehouse`,
-    description: `A starter blog with added site search.`,
+    title: `Max's Database`,
+    author: `Maxim Podolski`,
+    description: `A database with added site search.`,
     siteUrl: `https://gatsby-starter-blog-with-lunr-demo.netlify.com/`,
     social: {
-      twitter: `https://twitter.com/_lukewh`,
+      twitter: `https://twitter.com/2manypistachios`,
     },
   },
   plugins: [
@@ -80,6 +80,10 @@ module.exports = {
         languages: [{ name: "en" }],
         fields: [
           { name: "title", store: true, attributes: { boost: 20 } },
+          { name: "category", store: true, attributes: { boost: 15 } },
+          { name: "subcategory", store: true, attributes: { boost: 15 } },
+          { name: "source", store: true, attributes: { boost: 10 } },
+          { name: "author", store: true, attributes: { boost: 5 } },
           { name: "description", store: true, attributes: { boost: 5 } },
           { name: "content" },
           { name: "url", store: true },
@@ -88,6 +92,10 @@ module.exports = {
         resolvers: {
           MarkdownRemark: {
             title: node => node.frontmatter.title,
+            category: node => node.frontmatter.category,
+            subcategory: node => node.frontmatter.subcategory,
+            source: node => node.frontmatter.source,
+            author: node => node.frontmatter.author,
             description: node => node.frontmatter.description,
             content: node => node.rawMarkdownBody,
             url: node => node.fields.slug,
@@ -97,5 +105,6 @@ module.exports = {
         filename: "search_index.json",
       },
     },
+    `gatsby-plugin-netlify-cms`,
   ],
 }

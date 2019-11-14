@@ -14,7 +14,7 @@ const SearchResults = ({ query, results }) => (
     )}
     {!!results.length && (
       <ol className="search-results-list">
-        {results.map(({ title, url, date, description }) => (
+        {results.map(({ title, url, date, description, category, subcategory }) => (
           <li key={title}>
             <h3 className="search-results-list__heading">
               <a href={url} className="search-results-list__link">
@@ -35,6 +35,7 @@ const SearchResults = ({ query, results }) => (
                 />
               </p>
             )}
+            <p><b>{category}</b> <i>{subcategory}</i></p>
           </li>
         ))}
       </ol>
