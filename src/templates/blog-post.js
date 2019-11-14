@@ -19,22 +19,7 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <h1>{post.frontmatter.title}</h1>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {post.frontmatter.category}
-          </li>
-          <li>
-            {post.frontmatter.subcategory}
-          </li>
-        </ul>
+        <p><b>{post.frontmatter.category}</b> <i>{post.frontmatter.subcategory}</i></p>
         <p
           style={{
             ...scale(-1 / 5),
@@ -100,6 +85,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        category
+        subcategory
       }
     }
   }

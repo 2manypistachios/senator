@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Max's Database`,
+    title: `BarrettBase`,
     author: `Maxim Podolski`,
     description: `A database with added site search.`,
     siteUrl: `https://gatsby-starter-blog-with-lunr-demo.netlify.com/`,
