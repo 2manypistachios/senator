@@ -1,11 +1,14 @@
 backend:
-  name: senator
-media_folder: static/assets
-public_folder: assets
+  name: git-gateway
+  branch: master
+
+media_folder: content/assets
+public_folder: /assets
+
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: "content/blog"
     create: true
     fields:
       - { name: path, label: Path }
