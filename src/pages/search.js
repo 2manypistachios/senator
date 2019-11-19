@@ -7,6 +7,7 @@ import PrivateRoute from "../components/privateRoute"
 import Login from "./login"
 import SearchForm from "../components/searchForm"
 import SearchResults from "../components/searchResults"
+import ErrorBoundary from "../components/errorBoundary"
 
 const Search = ({ data, location }) => {
   const [results, setResults] = useState([])
@@ -39,13 +40,15 @@ const Search = ({ data, location }) => {
 
 class PrivateSearch extends React.Component {
   render() {
-    const searchQuery = this.props.query;
-    const results = this.props.results;
+    let searchQuery = this.props.query;
+    let results = this.props.results;
     return (
+      <ErrorBoundary>
       <div>
         <SearchForm query={searchQuery} />
         <SearchResults query={searchQuery} results={results} />
       </div>
+      </ErrorBoundary>
     )
   }
 }
