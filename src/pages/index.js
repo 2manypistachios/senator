@@ -19,13 +19,13 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        <h3
+        <h2
           style={{
             marginBottom: rhythm(1 / 4),
           }}
         >
             {post.frontmatter.title}
-        </h3>
+        </h2>
         <small>{post.frontmatter.date}</small>
         <p
           dangerouslySetInnerHTML={{
