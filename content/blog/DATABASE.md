@@ -54,3 +54,19 @@ description: Organization for templates
 
 ###Budget: Mental health, for
 - Budget: Mental health
+
+###Budget: Miscellaneous, for
+- Budget FY20, amendments
+- Legal services for the poor, for
+- Budget: Miscellaneous
+
+###Budget: Senior services, for
+- Budget: Senior services
+
+###Business/Labor/Workforce issues, misc.
+- Licence for Speech-Language Pathologists, for
+- Beer Distributors, for
+- Emerging Breweries, pro
+- S.1266 and H.1919, Central Service Techs, for
+- SD 1525 and SD1325 Co-sponsorship
+- E-Right to Repair
