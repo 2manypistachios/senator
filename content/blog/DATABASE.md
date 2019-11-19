@@ -70,3 +70,6 @@ description: Organization for templates
 - S.1266 and H.1919, Central Service Techs, for
 - SD 1525 and SD1325 Co-sponsorship
 - E-Right to Repair
+- Regulating Central Service Tech, Cosponsor Request
+- Emerging Brewery Bill, Co-Sponsor Request
+- Business/Labor/Workforce Issues, Misc
