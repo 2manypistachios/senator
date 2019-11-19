@@ -36,10 +36,10 @@ function Bio() {
                 }}
               />
               <p>
-                Search the database through title, category, or subcategory. It is maintained by <a href={social.twitter}>{author}</a>. 
+                Search the database through title, category, or subcategory. It is maintained by <a href={social.twitter}>{author}</a> The prompt is listed below: 
               </p>
             </div>
-            <p style={{ marginBottom: rhythm(2.5) }}><Link to="/search">Search all posts</Link></p>
+            <p style={{ marginBottom: rhythm(2.5) }}><Link to="/search">Click to search database</Link></p>
           </React.Fragment>
         )
       }}
