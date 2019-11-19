@@ -64,3 +64,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions
+  if (page.path.match(/^\search/)) {
+    page.matchPath = "/search/*"
+    // Update the page.
+    createPage(page)
+  }
+}

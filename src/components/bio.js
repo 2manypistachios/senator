@@ -36,7 +36,7 @@ function Bio() {
                 }}
               />
               <p>
-                This project was thanks to <a href="https://lunrjs.com/">Lunr.js</a>. It is maintained by <a href={social.twitter}>{author}</a>. 
+                Search the database through title, category, or subcategory. It is maintained by <a href={social.twitter}>{author}</a>. 
               </p>
             </div>
             <p style={{ marginBottom: rhythm(2.5) }}><Link to="/search">Search all posts</Link></p>

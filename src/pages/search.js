@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { graphq } from "gatsby"
+import { Router } from "@reach/router"
 import debounce from "lodash.debounce"
 import Layout from "../components/layout"
+import PrivateRoute from "../components/privateRoute"
+import Login from "./login"
 import SearchForm from "../components/searchForm"
 import SearchResults from "../components/searchResults"
 
@@ -15,7 +18,6 @@ const Search = ({ data, location }) => {
         const lunr = await window.__LUNR__.__loaded
         const refs = lunr.en.index.search(searchQuery)
         const posts = refs.map(({ ref }) => lunr.en.store[ref])
-
         setResults(posts)
       }, 500)
 
@@ -27,10 +29,25 @@ const Search = ({ data, location }) => {
 
   return (
     <Layout location={location} title={data.site.siteMetadata.title}>
-      <SearchForm query={searchQuery} />
-      <SearchResults query={searchQuery} results={results} />
+      <Router>
+        <PrivateRoute path="/search" component={PrivateSearch} query={searchQuery} results={results}/>
+        <Login path="/login" />
+      </Router>
     </Layout>
   )
+}
+
+class PrivateSearch extends React.Component {
+  render() {
+    const searchQuery = this.props.query;
+    const results = this.props.results;
+    return (
+      <div>
+        <SearchForm query={searchQuery} />
+        <SearchResults query={searchQuery} results={results} />
+      </div>
+    )
+  }
 }
 
 export default Search
